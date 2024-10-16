@@ -63,6 +63,10 @@ $ cd k3s-ansible
 First copy the sample inventory to `inventory.yml`.
 
 ```bash
+ansible all -b -m shell -a "echo \"\$(hostname) running and responding! \""
+```
+
+```bash
 cp inventory-sample.yml inventory.yml
 ```
 
@@ -100,7 +104,7 @@ ansible-playbook k3s.orchestration.site -i inventory.yml
 *Running the playbook from inside the repository*
 
 ```bash
-ansible-playbook playbooks/site.yml -i inventory.yml
+ansible-playbook playbooks/site.yml --ask-vault-pass -i inventory.yml
 ```
 
 ### Using an external database
