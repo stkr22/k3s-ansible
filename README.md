@@ -145,7 +145,7 @@ ansible-playbook k3s.orchestration.upgrade -i inventory.yml
 *Running the playbook from inside the repository*
 
 ```bash
-ansible-playbook playbooks/upgrade.yml -i inventory.yml
+ansible-playbook --ask-vault-pass playbooks/upgrade.yml -i inventory.yml
 ```
 
 ## Airgap Install
