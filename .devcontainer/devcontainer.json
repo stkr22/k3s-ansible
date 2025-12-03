@@ -22,5 +22,6 @@
 	],
 	"containerEnv": {
 		"KUBECONFIG": "/home/vscode/.kube/config"
-	}
+	},
+	"postCreateCommand": "ansible-galaxy install -r collections/requirements.yml"
 }
